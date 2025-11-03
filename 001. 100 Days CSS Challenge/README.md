@@ -2,4 +2,6 @@
 
 ## 🔍 Overview
 
-This is my implementation of the 100 Days CSS Challenge, where the goal is to recreate the layouts and animations shown in each challenge using HTML and SCSS.
+This repository contains my implementation of the **100 Days CSS Challenge**, where the goal is to recreate layouts and animations from each challenge using **HTML** and **SCSS**.
+
+Learn more about the challenge on the [official website](https://100dayscss.com/about/).
