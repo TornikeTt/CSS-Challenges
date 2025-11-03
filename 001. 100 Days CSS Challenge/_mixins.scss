@@ -1,0 +1,27 @@
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin border($width: 1px, $color: red) {
+    border: $width solid $color;
+}
+
+@mixin box-shadow-radius($radius: 5px) {
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius: $radius;
+}
+
+@mixin positionAbsolute(
+    $top: 50%,
+    $left: 50%,
+    $transform1: -50%,
+    $transform2: -50%
+) {
+    top: $top;
+    left: $left;
+    transform: translate($transform1, $transform2);
+}

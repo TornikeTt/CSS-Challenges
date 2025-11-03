@@ -1,0 +1,98 @@
+@use "../../mixins" as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    @include flex;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+
+    @include box-shadow-radius;
+    @include flex(column, center, center);
+}
+
+.numbers {
+    @include flex;
+
+    .one {
+        width: 24px;
+        height: 100px;
+        position: relative;
+
+        .partOne {
+            width: 20px;
+            height: 40px;
+            top: 0;
+            left: -5px;
+
+            background-color: white;
+            transform: rotate(50deg);
+
+            position: absolute;
+
+            @include box-shadow-radius;
+        }
+
+        .partTwo {
+            width: 24px;
+            height: 100px;
+
+            position: relative;
+            left: 10px;
+            z-index: 200;
+
+            background-color: white;
+
+            @include box-shadow-radius;
+        }
+    }
+
+    .two,
+    .three {
+        height: 100px;
+        width: 100px;
+        position: relative;
+
+        @include box-shadow-radius(100%);
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 100%;
+
+            @include border(25px, white);
+        }
+    }
+
+    .two {
+        z-index: 100;
+    }
+
+    .three {
+        right: 10px;
+    }
+}
+
+.days {
+    font-size: 78px;
+    line-height: 60px;
+    color: white;
+}
+
+.challenge {
+    font-size: 23px;
+    line-height: 20px;
+    color: white;
+}
