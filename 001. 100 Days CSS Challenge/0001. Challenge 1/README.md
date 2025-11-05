@@ -1,5 +1,7 @@
-# 🎯 100 Days CSS Challenge - Day 1
+# 🎯 Challenge 1 – **100 Days CSS**
+
+🚀 Live Demo - [View on CodePen](https://codepen.io/TornikeTt/pen/jEWoPro)
 
 ## 📸 Screenshot
 
-![Day 1 Screenshot](./screenshot/Day%201%20Challenge.png)
+![Challenge 1 Screenshot](./100%20Days%20CSS.png)

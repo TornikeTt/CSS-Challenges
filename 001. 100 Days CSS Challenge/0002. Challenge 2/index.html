@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="lines">
+                <div class="lineOne"></div>
+                <div class="lineTwo"></div>
+                <div class="lineThree"></div>
+            </div>
+        </div>
+
+        <script>
+            let lines = document.querySelector(".lines");
+            let lineOne = document.querySelector(".lineOne");
+            let lineTwo = document.querySelector(".lineTwo");
+            let lineThree = document.querySelector(".lineThree");
+
+            const linesArr = [lineOne, lineTwo, lineThree];
+
+            lines.addEventListener("click", () => {
+                const isActive = lineOne.classList.contains("active1");
+
+                linesArr.forEach((line, i) => {
+                    // remove previous animation classes
+                    line.classList.remove(`active${i + 1}`, `reverse${i + 1}`);
+
+                    // force reflow
+                    void line.offsetWidth;
+
+                    // add new animation class
+                    line.classList.add(
+                        isActive ? `reverse${i + 1}` : `active${i + 1}`
+                    );
+                });
+            });
+        </script>
+    </body>
+</html>

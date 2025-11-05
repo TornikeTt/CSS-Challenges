@@ -1,0 +1,91 @@
+@use "../../mixins" as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    @include flex;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: #3faf82;
+
+    @include flex;
+    @include box-shadow-radius;
+}
+
+.lines {
+    cursor: pointer;
+    @include flex(column, center, center);
+    gap: 12px;
+
+    .lineOne,
+    .lineTwo,
+    .lineThree {
+        width: 80px;
+        height: 8px;
+        background-color: white;
+        transition: all 1s;
+        @include box-shadow-radius;
+    }
+}
+
+@for $i from 1 through 3 {
+    .active#{$i} {
+        animation: hamburgerMenu#{$i} 0.7s forwards;
+    }
+}
+
+@for $i from 1 through 3 {
+    .reverse#{$i} {
+        animation: hamburgerMenu#{$i} 0.7s reverse;
+    }
+}
+
+@keyframes hamburgerMenu1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px) rotate(0);
+    }
+
+    100% {
+        transform: translateY(20px) rotate(45deg);
+    }
+}
+
+@keyframes hamburgerMenu2 {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes hamburgerMenu3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(-20px) rotate(135deg);
+    }
+}
