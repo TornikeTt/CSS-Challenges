@@ -12,6 +12,7 @@ This repository contains my implementation of the **100 Days CSS Challenge**, wh
 | --- | ---------------- | ----------------------------------------------------------- |
 | 1   | **100 Days CSS** | [View on CodePen](https://codepen.io/TornikeTt/pen/jEWoPro) |
 | 2   | **Menu Icon**    | [View on CodePen](https://codepen.io/TornikeTt/pen/JoGqdQp) |
+| 3   | **The Pyramide** | [View on CodePen](https://codepen.io/TornikeTt/pen/Kwzwbop) |
 
 ---
 
