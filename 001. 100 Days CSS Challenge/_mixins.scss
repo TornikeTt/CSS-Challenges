@@ -21,6 +21,7 @@
     $transform1: -50%,
     $transform2: -50%
 ) {
+    position: absolute;
     top: $top;
     left: $left;
     transform: translate($transform1, $transform2);
